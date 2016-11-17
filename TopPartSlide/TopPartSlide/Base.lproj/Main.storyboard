@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HWz-lj-8pI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ODE-4g-1l8">
+            <objects>
+                <navigationController id="HWz-lj-8pI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIp-zF-rZf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nrL-OK-j8d" kind="relationship" relationship="rootViewController" id="9OQ-tc-XLc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dd-sr-hsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2250" y="-80"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="QVV-9A-bRY">
+            <objects>
+                <viewController id="nrL-OK-j8d" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMt-7c-PyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="C0L-UJ-INF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhg-oI-YnL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERk-vE-isE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="35"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ha8-sj-YvO"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAX-Fv-Dux">
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ERk-vE-isE" firstAttribute="top" secondItem="vMt-7c-PyX" secondAttribute="bottom" id="9PF-k6-uJS"/>
+                            <constraint firstAttribute="trailing" secondItem="ERk-vE-isE" secondAttribute="trailing" id="FeX-kg-uY6"/>
+                            <constraint firstItem="ERk-vE-isE" firstAttribute="leading" secondItem="bhg-oI-YnL" secondAttribute="leading" id="FfG-cU-Nv3"/>
+                            <constraint firstItem="mAX-Fv-Dux" firstAttribute="top" secondItem="ERk-vE-isE" secondAttribute="bottom" id="g3s-cq-rw8"/>
+                            <constraint firstItem="C0L-UJ-INF" firstAttribute="top" secondItem="mAX-Fv-Dux" secondAttribute="bottom" id="hFS-Uy-0Bf"/>
+                            <constraint firstItem="mAX-Fv-Dux" firstAttribute="leading" secondItem="bhg-oI-YnL" secondAttribute="leading" id="rRl-lj-Zb5"/>
+                            <constraint firstAttribute="trailing" secondItem="mAX-Fv-Dux" secondAttribute="trailing" id="umc-Dj-yhA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="Rum-SO-8XH"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="mAX-Fv-Dux" id="QWb-KK-YvO"/>
+                        <outlet property="titleScrollView" destination="ERk-vE-isE" id="2mE-Ci-1XC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nge-mo-xle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1449" y="-81"/>
+        </scene>
+    </scenes>
+</document>
